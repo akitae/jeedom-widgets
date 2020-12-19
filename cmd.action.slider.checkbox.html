@@ -1,0 +1,34 @@
+<div class="cmd cmd-widget" data-type="action" data-subtype="slider" data-template="default" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="dashboard">
+    <div class="content-xs">
+        <div class="ui-corner-all ui-widget ui-widget-content" value="#state#">
+            <label>#valueName#</label>
+        </div>
+    </div>
+
+    <script>
+        //Mise à jour
+        jeedom.cmd.update['#id#'] = function(_options) {
+            $(".cmd[data-cmd_uid='#uid#'] label i").remove();
+            if(parseInt(_options.display_value) === 0) {
+                $(".cmd[data-cmd_uid='#uid#'] label").append('<i class="icon jeedom2-case"></i>');
+                $(".cmd[data-cmd_uid='#uid#'] .ui-widget-content").val(0);
+
+            }else{
+                $(".cmd[data-cmd_uid='#uid#'] label").append('<i class="icon jeedom2-case_ok"></i>');
+                $(".cmd[data-cmd_uid='#uid#'] .ui-widget-content").val(1);
+            }
+        }
+
+        //Initialisation
+        jeedom.cmd.update['#id#']({display_value:'#state#',valueDate:'#valueDate#',collectDate:'#collectDate#',alertLevel:'#alertLevel#'});
+
+        //Execution de la commande
+        $(".cmd[data-cmd_uid='#uid#'] .ui-widget-content").click(function () {
+            if($(".cmd[data-cmd_uid='#uid#'] .ui-widget-content").val() === '0') {
+                jeedom.cmd.execute({id: '#id#', value: {slider: 1}});
+            }else{
+                jeedom.cmd.execute({id: '#id#', value: {slider: 0}});
+            }
+        })
+    </script>
+</div>
