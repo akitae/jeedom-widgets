@@ -16,4 +16,4 @@ le concernant.
 |box.html | bg-color; color | action| other | ![box](images/widget/box.png)|
 |cmd.action.slider.timebutton.html|name_display|action|slider|![timeButton](images/widget/timeButton.png)|[images.jeedom.com](https://images.jeedom.com/archives/widget/)
 |cmd.action.slider.checkbox.html| |action| slider| ![slider-checkbox](images/widget/slider-checkbox.png)
-|[reveil.php](images/scenario/reveil.php)| | scenario (bloc code à adapter selon le nom des composants)| | Met à jour la variable wake-up (0 ou 1) en fonction de l'heure et du jour indiqué)
+|[reveil.php](scenario/reveil.php)| | scenario (bloc code à adapter selon le nom des composants)| | Met à jour la variable wake-up (0 ou 1) en fonction de l'heure et du jour indiqué)
