@@ -9,8 +9,12 @@ $dayIsChecked = cmd::byString('#[Chambre][VIRTUEL - Reveil]['.$arrayDay[$current
 //alarm on for 30 min
 $endAlarm = $alarmHour + 30;
 
-if($scenario->getData('wake-up') == 0 && $alarmActif == 1 && $dayIsChecked == 1 && $currentHour >= $alarmHour && $currentHour <= $endAlarm) {
-    $scenario->setData('wake-up',1);
-}else if($scenario->getData('wake-up') == 1) {
-    $scenario->setData('wake-up',0);
+if($alarmActif == 1 && $dayIsChecked == 1 && $currentHour >= $alarmHour && $currentHour <= $endAlarm) {
+    if($scenario->getData('wake-up') == 0){
+        $scenario->setData('wake-up',1);
+    }
+}else {
+    if($scenario->getData('wake-up') == 1){
+        $scenario->setData('wake-up',0);
+    }
 }
