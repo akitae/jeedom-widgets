@@ -1,8 +1,3 @@
-L'objectif de ce github est uniquement de stocker des widgets (récupérés à divers endroits ou fabriqués/modifiés). 
-
-Lorsque j'utilise les idées ou du code provenant d'un site, celui-ci est cité dans la colonne source. Dans le cas où l'une des sources citées ne souhaite pas être affichée, je retirerais la partie
-le concernant.
-
 # Composant
 
 |Nom| widgets | Rendu | Source
